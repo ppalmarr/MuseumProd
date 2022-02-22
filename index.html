@@ -6,7 +6,7 @@
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <meta name="viewport" content="width=device-width, initial-scale = 1.0">
         <meta name = "description" content = "Политехнический музей ИТА ЮФУ">
-        <link rel="stylesheet" href="css/style.min.css?_v=20220222204549">
+        <link rel="stylesheet" href="css/style.min.css?_v=20220222231411">
         <link rel="shortcut icon" href="img/logo_museum_history.png">
         <link rel="preload" as="font" type="font/woff2"
           href="fonts/OpenSans-Regular.woff2" crossorigin>
@@ -14,9 +14,9 @@
           href="fonts/OpenSans-Bold.woff2" crossorigin>
         <link
           rel="stylesheet"
-          href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20220222204549"
+          href="https://unpkg.com/swiper/swiper-bundle.min.css?_v=20220222231411"
         />
-        <script src="https://api-maps.yandex.ru/2.1/?a5ea9f03-c642-48d8-97b4-cdc88ff35b55&lang=ru_RU&_v=20220222204549" type="text/javascript">
+        <script src="https://api-maps.yandex.ru/2.1/?a5ea9f03-c642-48d8-97b4-cdc88ff35b55&lang=ru_RU&_v=20220222231411" type="text/javascript">
         </script>
     </head>
     <body class="page__body">
@@ -500,15 +500,15 @@
       <div class="museum-contacts-form__text">
         Заполните простую форму ниже (сообщение придет нам прямо на email главного клиент-сервиса) или свяжитесь с нами по контактам, которые видите на этой странице.
       </div>
-      <form class="museum-contacts-form__question-form" name="user-questions" action="question-form" method="GET">
+      <form method="#" id="question-form-desktop" class="museum-contacts-form__question-form" name="user-questions" action="question.php">
         <p class="museum-contacts-form__user-name-block">
           <label for="user-name-input" class="visually-hidden">Введите ваше имя</label>
-          <input type="text" class="museum-contacts-form__user-name" id="user-name-input" name="user-name"
+          <input type="text" class="museum-contacts-form__user-name req name" class="req" id="user-name-input" name="user-name"
             placeholder="Ваше имя" required>
         </p>
         <p class="museum-contacts-form__user-email-block">
           <label for="user-email-input" class="visually-hidden">Введите ваш email</label>
-          <input type="email" class="museum-contacts-form__user-email" id="user-email-input" name="user-email"
+          <input type="email" class="museum-contacts-form__user-email req email" id="user-email-input" name="user-email"
             placeholder="Ваш email" required>
         </p>
         <p class="museum-contacts-form__user-question-block">
@@ -517,9 +517,8 @@
               placeholder="Напишите Ваш вопрос"></textarea>
         </p>
         <p class="museum-contacts-form__submit-block">
-          <label for="question-submit-id" class="visually-hidden">Отправить вопрос</label>
-          <button id="question-submit-id" name="question-submit" class="museum-contacts-form__submit btn-form"
-            type="submit" value="Отправить вопрос" form="user-questions">Отправить</button>
+          <button type="submit" id="question-submit-id" class="museum-contacts-form__submit btn-form"
+            >Отправить</button>
         </p>
       </form>
       <p class="museum-contacts-form__rules">
@@ -535,15 +534,15 @@
     <div class="museum-contacts-mobile-form__text">
       Заполните простую форму ниже (сообщение придет нам прямо на email главного клиент-сервиса) или свяжитесь с нами по контактам, которые видите на этой странице.
     </div>
-    <form class="museum-contacts-mobile-form__question-form" name="user-questions-mobile" action="question-form" method="GET">
+    <form id="form-mobile-question" class="museum-contacts-mobile-form__question-form" name="user-questions-mobile" action="question-form" method="GET">
       <p class="museum-contacts-mobile-form__user-name-block">
         <label for="user-name-input" class="visually-hidden">Введите ваше имя</label>
-        <input type="text" class="museum-contacts-mobile-form__user-name" id="user-name-input-mobile" name="user-name"
+        <input type="text" class="museum-contacts-mobile-form__user-name req name" id="user-name-input-mobile" name="user-name"
           placeholder="Ваше имя" required>
       </p>
       <p class="museum-contacts-mobile-form__user-email-block">
         <label for="user-email-input" class="visually-hidden">Введите ваш email</label>
-        <input type="email" class="museum-contacts-mobile-form__user-email" id="user-email-input-mobile" name="user-email"
+        <input type="email" class="museum-contacts-mobile-form__user-email req email" id="user-email-input-mobile" name="user-email"
           placeholder="Ваш email" required>
       </p>
       <p class="museum-contacts-mobile-form__user-question-block">
@@ -553,8 +552,8 @@
       </p>
       <p class="museum-contacts-mobile-form__submit-block">
         <label for="question-submit-id" class="visually-hidden">Отправить вопрос</label>
-        <button id="question-submit-id-mobile" name="question-submit-mobile" class="museum-contacts-mobile-form__submit btn-form"
-          type="submit" value="Отправить вопрос" form="user-questions">Отправить</button>
+        <button id="question-submit-id-mobile" class="museum-contacts-mobile-form__submit btn-form"
+          type="submit" value="Отправить вопрос">Отправить</button>
       </p>
     </form>
     <p class="museum-contacts-mobile-form__rules">
@@ -606,7 +605,7 @@
 
         </div>
     </body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js?_v=20220222204549"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20220222204549"></script>
-    <script src="js/app.min.js?_v=20220222204549"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js?_v=20220222231411"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js?_v=20220222231411"></script>
+    <script src="js/app.min.js?_v=20220222231411"></script>
 </html>
