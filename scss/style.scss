@@ -1,0 +1,134 @@
+@import "mixins.scss";
+@import "variables.scss";
+@import "fonts.scss";
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*:hover,
+*:active,
+*:focus {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+}
+
+button:active,
+button:focus {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+[class*="__container"] {
+  width: 1120px;
+  margin: 0px auto;
+  padding: 0px 10px;
+  overflow: hidden;
+}
+
+.page-wrapper {
+  display: grid;
+  position: relative;
+  grid-template-rows: 1fr auto;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+// mobile
+@media (max-width: 767.98px) {
+  .page-wrapper {
+    width: 100%;
+  }
+
+  [class*="__container"] {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@import "header_desktop.scss";
+@import "header_mobile.scss";
+@import "main_index_desktop.scss";
+@import "main_index_mobile.scss";
+@import "footer_desktop.scss";
+@import "footer_mobile.scss";
+@import "main_form_desktop.scss";
+@import "main_form_mobile.scss";
+@import "main_news_desktop.scss";
+@import "main_news_mobile.scss";
+@import "main_article_news_desktop.scss";
+@import "main_article_news_mobile.scss";
+@import "main_events_desktop.scss";
+@import "main_events_mobile.scss";
+@import "main_events_article_desktop.scss";
+@import "main_events_article_mobile.scss";
+@import "main_history_museum_desktop.scss";
+@import "main_history_museum_mobile.scss";
+@import "main_expo_desktop.scss";
+@import "main_expo_mobile.scss";
+@import "pagination.scss";
+@import "main_article_expo_desktop.scss";
+@import "main_article_expo_mobile.scss";
+@import "main_form_events_desktop.scss";
+@import "main_form_event_mobile.scss";
+
